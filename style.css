@@ -1,0 +1,36 @@
+:root {
+    --pixel-size:6;
+}
+
+body {
+    background: transparent;
+}
+
+.cat-container {
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    transform: translateX(-50%);
+    width: calc(32px * var(--pixel-size));
+   height: calc(32px * var(--pixel-size));
+    overflow: hidden;
+    /* background-color: aqua; */
+}
+
+.cat-sprite-sheet {
+    animation: moveSpritesheet 1s steps(4) infinite;
+    width: calc(256px * var(--pixel-size));
+}
+
+@keyframes moveSpritesheet {
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(-50%,0,0)
+    }
+ }
+
+ .pixelart {
+    image-rendering: pixelated;
+ }
