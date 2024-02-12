@@ -7,12 +7,13 @@ function createWindow() {
   const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    alwaysOnTop: true,
+    width: 175,
+    height: 75,
     transparent: true,
     frame: false,
     x: 0, // Set x-coordinate to 0
-    y: height - 600, // Set y-coordinate based on screen height
+    y: height + 1280, // Set y-coordinate based on screen height
     webPreferences: {
       nodeIntegration: true,
     },
